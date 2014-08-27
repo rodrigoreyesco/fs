@@ -661,7 +661,7 @@ Flight Status LATAM API provee información de status de vuelos LATAM.
 ## Flight Status Information By Flight Number [/ws/api/flight-status/1.0/rest/flight-number/information/airline-code/{airlineCode}/flight-number/{flightNumber}/standar-time-condition/{standardTimeCondition}/departure-date/{departureDate}/language/{language}/country/{country}]
 
 + Parameters
-    + airlineCode (required, String, `LAN`) ...  `IATA Airline Code`  accepted values LAN, TAM.
+    + airlineCode (required, String, `LAN`) ...  `IATA Airline Code`  accepted values LAN, TAM, LA, 4M, XL, JJ, PZ.
     + flightNumber (required, string, `500`) ... String `Flight Number Requested`.
     + standardTimeCondition (required, String, `SCHEDULE`) ...  `Departure DateTime Condition to be Requested` accepted values SCHEDULE, REAL.
     + departureDate (required, Date, `2014-08-20`) ...  `Local Departure Date for Flight Requested, for UTC Time Zone add Z` pattern YYYY-MM-DD or YYYY-MM-DDZ
