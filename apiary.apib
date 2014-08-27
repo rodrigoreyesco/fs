@@ -658,17 +658,15 @@ Flight Status LATAM API provee información de status de vuelos LATAM.
             }
                 
             
-## Flight Status Information By Flight Number [/ws/api/flight-status/1.0/rest/flight-number/information/airline/{airline}/flight-number/{flightNumber}/departure-condition/{departureCondition}/time-standard/{timeStandard}/departure-date/{departureDate}/language/{language}/country/{country}]
+## Flight Status Information By Flight Number [/ws/api/flight-status/1.0/rest/flight-number/information/airline-code/{airlineCode}/flight-number/{flightNumber}/standar-time-condition/{standardTimeCondition}/departure-date/{departureDate}/language/{language}/country/{country}]
 
 + Parameters
-    + airline (required, String, `LAN`) ...  `Airline Code`  accepted values LAN, TAM.
+    + airlineCode (required, String, `LAN`) ...  `IATA Airline Code`  accepted values LAN, TAM.
     + flightNumber (required, string, `500`) ... String `Flight Number Requested`.
-    + departureCondition (required, String, `SCHEDULE`) ...  `Departure DateTime Condition to be Requested` accepted values SCHEDULE, REAL.
-    + timeStandard (required, String, `LOCAL`) ...  `Time Standard to be Requested` accepted values LOCAL, UTC.
-    + departureDate (required, Date, `2014-08-20`) ...  `Departure Date for Flight Requested` pattern YYYY-MM-DD
+    + standardTimeCondition (required, String, `SCHEDULE`) ...  `Departure DateTime Condition to be Requested` accepted values SCHEDULE, REAL.
+    + departureDate (required, Date, `2014-08-20`) ...  `Local Departure Date for Flight Requested, for UTC Time Zone add Z` pattern YYYY-MM-DD or YYYY-MM-DDZ
     + language (required, String, `es`) ...  `language for message translation `  accepted values es, pt, en, de, fr, it
     + country (required, String, `cl`) ...  `country for message translation`  accepted values ar, cl, br, co, ec, pe, uy, py, us, mx, ca, de, es, fr, uk, ue, au, nz, un
-    
     
 
 ### Retrieve a Flight Status Information By Flight Number [GET]
