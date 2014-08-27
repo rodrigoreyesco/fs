@@ -651,7 +651,7 @@ Flight Status LATAM API provee información de status de vuelos LATAM.
     + Body   
     
             {
-                "ServiceStatus": {
+                "status": {
                     "code": "500",
                     "message": "ERROR",
                     "nativeMessage": "Runtime Exception"
@@ -681,7 +681,613 @@ Flight Status LATAM API provee información de status de vuelos LATAM.
 
     + Body
             
-            hola
+            {
+                "status": {
+                    "code": "0",
+                    "message": "Message",
+                    "nativeMessage": "Native Message"
+                },
+                "data": {
+                    "flights": [
+                        {
+                            "airlineCode": "LA",
+                            "flightNumber": "500",
+                            "flightDate": "2014-08-20",
+                            "legs": [
+                                {
+                                    "airlineCodes": {
+                                        "operating": "LA",
+                                        "marketing": "LA",
+                                        "owner": "LA"
+                                    },
+                                    "departure": {
+                                        "airportCode": "SCL",
+                                        "blockOff": {
+                                            "scheduleDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "realDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "estimatedDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            }
+                                        },
+                                        "takeOff": {
+                                            "scheduleDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "realDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "estimatedDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            }
+                                        }
+                                    },
+                                    "arrival": {
+                                        "airportCode": "MIA",
+                                        "touchDown": {
+                                            "scheduleDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "realDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "estimatedDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            }
+                                        },
+                                        "blockOn": {
+                                            "scheduleDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "realDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "estimatedDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            }
+                                        }
+                                    },
+                                    "flightServiceType": {
+                                        "code": "J",
+                                        "description": "Passenger Normal Service",
+                                        "routeTypeCode": "INT"
+                                    },
+                                    "material": {
+                                        "aircraftRegistration": "CC-BBD",
+                                        "fleet": "B787",
+                                        "model": "800"
+                                    },
+                                    "statusCode": "AA",
+                                    "descriptionStatusCode": "Descripcion Status Code AA",
+                                    "operationStatusCode": "AA",
+                                    "descriptionOperationStatusCode": "Descripcion Operation Status Code AA",
+                                    "sufixCode": "AA",
+                                    "descriptionSufixCode": "Descripcion Sufix Code AA",
+                                    "operationalContingency": [
+                                        {
+                                            "departureAirportIataCode": "SCL",
+                                            "contingencyType": "DELAY",
+                                            "contingencyDescription": "Esto es un Atraso",
+                                            "statusLog": [
+                                                {
+                                                    "statusDateTime": "2014-07-27T09:44:36",
+                                                    "contingencyStatusCode": "ED-1",
+                                                    "informedDateTime": "2014-07-27T09:44:36",
+                                                    "cause": {
+                                                        "causeCode": "causa1",
+                                                        "causeOtherText": "otra causa 1",
+                                                        "inputDateTime": "2014-07-25T09:44:36"
+                                                    },
+                                                    "reason": {
+                                                        "reasonCode": "razon1",
+                                                        "reasonOtherText": "otra razon 1",
+                                                        "inputDateTime": "2014-07-25T09:44:36"
+                                                    },
+                                                    "basicServices": [
+                                                        {
+                                                            "basicServiceType": "servicio 1",
+                                                            "basicServiceDescription": "descripcion del servicio 1",
+                                                            "isServiceApplies": "true",
+                                                            "isServiceExceptions": "false",
+                                                            "isServiceGranted": "true",
+                                                            "originQuantity": "5",
+                                                            "destinationQuantity": "10"
+                                                        },
+                                                        {
+                                                            "basicServiceType": "servicio 2",
+                                                            "basicServiceDescription": "descripcion del servicio 2",
+                                                            "isServiceApplies": "true",
+                                                            "isServiceExceptions": "false",
+                                                            "isServiceGranted": "true",
+                                                            "originQuantity": "5",
+                                                            "destinationQuantity": "10"
+                                                        }
+                                                    ],
+                                                    "notifications": {
+                                                        "isNotifiedInAirport": "false",
+                                                        "airportNotificationText": "usted será notificado en el aeropuerto",
+                                                        "isNotifiedOutsideAirport": "true",
+                                                        "outsideAirportNotificationText": "usted sera notificado fuera del aeropuerto"
+                                                    }
+                                                },
+                                                {
+                                                    "statusDateTime": "2014-07-25T09:44:36",
+                                                    "contingencyStatusCode": "ED-1",
+                                                    "informedDateTime": "2014-07-25T09:44:36",
+                                                    "cause": {
+                                                        "causeCode": "causa1",
+                                                        "causeOtherText": "otra causa 1",
+                                                        "inputDateTime": "2014-07-25T09:44:36"
+                                                    },
+                                                    "reason": {
+                                                        "reasonCode": "razon1",
+                                                        "reasonOtherText": "otra razon 1",
+                                                        "inputDateTime": "2014-07-25T09:44:36"
+                                                    },
+                                                    "basicServices": [
+                                                        {
+                                                            "basicServiceType": "servicio 1",
+                                                            "basicServiceDescription": "descripcion del servicio 1",
+                                                            "isServiceApplies": "true",
+                                                            "isServiceExceptions": "false",
+                                                            "isServiceGranted": "true",
+                                                            "originQuantity": "5",
+                                                            "destinationQuantity": "10"
+                                                        },
+                                                        {
+                                                            "basicServiceType": "servicio 2",
+                                                            "basicServiceDescription": "descripcion del servicio 2",
+                                                            "isServiceApplies": "true",
+                                                            "isServiceExceptions": "false",
+                                                            "isServiceGranted": "true",
+                                                            "originQuantity": "5",
+                                                            "destinationQuantity": "10"
+                                                        }
+                                                    ],
+                                                    "notifications": {
+                                                        "isNotifiedInAirport": "false",
+                                                        "airportNotificationText": "usted será notificado en el aeropuerto",
+                                                        "isNotifiedOutsideAirport": "true",
+                                                        "outsideAirportNotificationText": "usted sera notificado fuera del aeropuerto"
+                                                    }
+                                                }
+                                            ],
+                                            "protections": [
+                                                {
+                                                    "airlineCode": "4M",
+                                                    "flightNumber": "465",
+                                                    "flightDate": "2014-07-25",
+                                                    "departureAirportIataCode": "SCL"
+                                                },
+                                                {
+                                                    "airlineCode": "4M",
+                                                    "flightNumber": "465",
+                                                    "flightDate": "2014-07-25",
+                                                    "departureAirportIataCode": "SCL"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "gateInformation": {
+                                        "gateNumber": "17",
+                                        "gateDescription": "Puerta de Embarque 17"
+                                    }
+                                },
+                                {
+                                    "airlineCodes": {
+                                        "operating": "LA",
+                                        "marketing": "LA",
+                                        "owner": "LA"
+                                    },
+                                    "departure": {
+                                        "airportCode": "SCL",
+                                        "blockOff": {
+                                            "scheduleDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "realDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "estimatedDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            }
+                                        },
+                                        "takeOff": {
+                                            "scheduleDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "realDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "estimatedDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            }
+                                        }
+                                    },
+                                    "arrival": {
+                                        "airportCode": "MIA",
+                                        "touchDown": {
+                                            "scheduleDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "realDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "estimatedDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            }
+                                        },
+                                        "blockOn": {
+                                            "scheduleDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "realDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "estimatedDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            }
+                                        }
+                                    },
+                                    "flightServiceType": {
+                                        "code": "J",
+                                        "description": "Passenger Normal Service",
+                                        "routeTypeCode": "INT"
+                                    },
+                                    "material": {
+                                        "aircraftRegistration": "CC-BBD",
+                                        "fleet": "B787",
+                                        "model": "800"
+                                    },
+                                    "statusCode": "AA",
+                                    "descriptionStatusCode": "Descripcion Status Code AA",
+                                    "operationStatusCode": "AA",
+                                    "descriptionOperationStatusCode": "Descripcion Operation Status Code AA",
+                                    "sufixCode": "AA",
+                                    "descriptionSufixCode": "Descripcion Sufix Code AA",
+                                    "operationalContingency": [
+                                        {
+                                            "departureAirportIataCode": "SCL",
+                                            "contingencyType": "DELAY",
+                                            "contingencyDescription": "Esto es un Atraso",
+                                            "statusLog": [
+                                                {
+                                                    "statusDateTime": "2014-08-20T10:40",
+                                                    "contingencyStatusCode": "ED-1",
+                                                    "informedDateTime": "2014-08-20T10:40",
+                                                    "cause": {
+                                                        "causeCode": "causa1",
+                                                        "causeOtherText": "otra causa 1",
+                                                        "inputDateTime": "2014-08-20"
+                                                    },
+                                                    "reason": {
+                                                        "reasonCode": "razon1",
+                                                        "reasonOtherText": "otra razon 1",
+                                                        "inputDateTime": "2014-08-20"
+                                                    },
+                                                    "basicServices": [
+                                                        {
+                                                            "basicServiceType": "servicio 1",
+                                                            "basicServiceDescription": "descripcion del servicio 1",
+                                                            "isServiceApplies": "true",
+                                                            "isServiceExceptions": "false",
+                                                            "isServiceGranted": "true",
+                                                            "originQuantity": "5",
+                                                            "destinationQuantity": "10"
+                                                        },
+                                                        {
+                                                            "basicServiceType": "servicio 2",
+                                                            "basicServiceDescription": "descripcion del servicio 2",
+                                                            "isServiceApplies": "true",
+                                                            "isServiceExceptions": "false",
+                                                            "isServiceGranted": "true",
+                                                            "originQuantity": "5",
+                                                            "destinationQuantity": "10"
+                                                        }
+                                                    ],
+                                                    "notifications": {
+                                                        "isNotifiedInAirport": "false",
+                                                        "airportNotificationText": "usted será notificado en el aeropuerto",
+                                                        "isNotifiedOutsideAirport": "true",
+                                                        "outsideAirportNotificationText": "usted sera notificado fuera del aeropuerto"
+                                                    }
+                                                },
+                                                {
+                                                    "statusDateTime": "25-07-2014 09:44:36",
+                                                    "contingencyStatusCode": "ED-1",
+                                                    "informedDateTime": "2014-08-20T10:40",
+                                                    "cause": {
+                                                        "causeCode": "causa1",
+                                                        "causeOtherText": "otra causa 1",
+                                                        "inputDateTime": "2014-08-20"
+                                                    },
+                                                    "reason": {
+                                                        "reasonCode": "razon1",
+                                                        "reasonOtherText": "otra razon 1",
+                                                        "inputDateTime": "2014-08-20"
+                                                    },
+                                                    "basicServices": [
+                                                        {
+                                                            "basicServiceType": "servicio 1",
+                                                            "basicServiceDescription": "descripcion del servicio 1",
+                                                            "isServiceApplies": "true",
+                                                            "isServiceExceptions": "false",
+                                                            "isServiceGranted": "true",
+                                                            "originQuantity": "5",
+                                                            "destinationQuantity": "10"
+                                                        },
+                                                        {
+                                                            "basicServiceType": "servicio 2",
+                                                            "basicServiceDescription": "descripcion del servicio 2",
+                                                            "isServiceApplies": "true",
+                                                            "isServiceExceptions": "false",
+                                                            "isServiceGranted": "true",
+                                                            "originQuantity": "5",
+                                                            "destinationQuantity": "10"
+                                                        }
+                                                    ],
+                                                    "notifications": {
+                                                        "isNotifiedInAirport": "false",
+                                                        "airportNotificationText": "usted será notificado en el aeropuerto",
+                                                        "isNotifiedOutsideAirport": "true",
+                                                        "outsideAirportNotificationText": "usted sera notificado fuera del aeropuerto"
+                                                    }
+                                                }
+                                            ],
+                                            "protections": [
+                                                {
+                                                    "airlineCode": "4M",
+                                                    "flightNumber": "465",
+                                                    "flightDate": "2014-08-20",
+                                                    "departureAirportIataCode": "SCL"
+                                                },
+                                                {
+                                                    "airlineCode": "4M",
+                                                    "flightNumber": "465",
+                                                    "flightDate": "2014-08-20",
+                                                    "departureAirportIataCode": "SCL"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "gateInformation": {
+                                        "gateNumber": "17",
+                                        "gateDescription": "Puerta de Embarque 17"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "airlineCode": "JJ",
+                            "flightNumber": "8029",
+                            "flightDate": "20-08-2014",
+                            "legs": [
+                                {
+                                    "airlineCodes": {
+                                        "operating": "JJ",
+                                        "marketing": "JJ",
+                                        "owner": "JJ"
+                                    },
+                                    "departure": {
+                                        "airportCode": "SCL",
+                                        "blockOff": {
+                                            "scheduleDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "realDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "estimatedDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            }
+                                        },
+                                        "takeOff": {
+                                            "scheduleDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "realDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "estimatedDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            }
+                                        }
+                                    },
+                                    "arrival": {
+                                        "airportCode": "GRU",
+                                        "touchDown": {
+                                            "scheduleDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "realDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "estimatedDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            }
+                                        },
+                                        "blockOn": {
+                                            "scheduleDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "realDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            },
+                                            "estimatedDateTime": {
+                                                "utc": "2014-08-20T10:40Z",
+                                                "local": "2014-08-20T10:40"
+                                            }
+                                        }
+                                    },
+                                    "flightServiceType": {
+                                        "code": "J",
+                                        "description": "Passenger Normal Service",
+                                        "routeTypeCode": "INT"
+                                    },
+                                    "material": {
+                                        "aircraftRegistration": "PR-MAZ",
+                                        "fleet": "A320",
+                                        "model": "200"
+                                    },
+                                    "statusCode": "AA",
+                                    "descriptionStatusCode": "Descripcion Status Code AA",
+                                    "operationStatusCode": "AA",
+                                    "descriptionOperationStatusCode": "Descripcion Operation Status Code AA",
+                                    "sufixCode": "AA",
+                                    "descriptionSufixCode": "Descripcion Sufix Code AA",
+                                    "operationalContingency": [
+                                        {
+                                            "departureAirportIataCode": "SCL",
+                                            "contingencyType": "DELAY",
+                                            "contingencyDescription": "Esto es un Atraso",
+                                            "statusLog": [
+                                                {
+                                                    "statusDateTime": "2014-08-20T10:40",
+                                                    "contingencyStatusCode": "ED-1",
+                                                    "informedDateTime": "2014-08-20T10:40",
+                                                    "cause": {
+                                                        "causeCode": "causa1",
+                                                        "causeOtherText": "otra causa 1",
+                                                        "inputDateTime": "2014-08-20"
+                                                    },
+                                                    "reason": {
+                                                        "reasonCode": "razon1",
+                                                        "reasonOtherText": "otra razon 1",
+                                                        "inputDateTime": "2014-08-20"
+                                                    },
+                                                    "basicServices": [
+                                                        {
+                                                            "basicServiceType": "servicio 1",
+                                                            "basicServiceDescription": "descripcion del servicio 1",
+                                                            "isServiceApplies": "true",
+                                                            "isServiceExceptions": "false",
+                                                            "isServiceGranted": "true",
+                                                            "originQuantity": "5",
+                                                            "destinationQuantity": "10"
+                                                        },
+                                                        {
+                                                            "basicServiceType": "servicio 2",
+                                                            "basicServiceDescription": "descripcion del servicio 2",
+                                                            "isServiceApplies": "true",
+                                                            "isServiceExceptions": "false",
+                                                            "isServiceGranted": "true",
+                                                            "originQuantity": "5",
+                                                            "destinationQuantity": "10"
+                                                        }
+                                                    ],
+                                                    "notifications": {
+                                                        "isNotifiedInAirport": "false",
+                                                        "airportNotificationText": "usted será notificado en el aeropuerto",
+                                                        "isNotifiedOutsideAirport": "true",
+                                                        "outsideAirportNotificationText": "usted sera notificado fuera del aeropuerto"
+                                                    }
+                                                },
+                                                {
+                                                    "statusDateTime": "2014-08-20T10:40",
+                                                    "contingencyStatusCode": "ED-1",
+                                                    "informedDateTime": "2014-08-20T10:40",
+                                                    "cause": {
+                                                        "causeCode": "causa1",
+                                                        "causeOtherText": "otra causa 1",
+                                                        "inputDateTime": "2014-08-20"
+                                                    },
+                                                    "reason": {
+                                                        "reasonCode": "razon1",
+                                                        "reasonOtherText": "otra razon 1",
+                                                        "inputDateTime": "2014-08-20"
+                                                    },
+                                                    "basicServices": [
+                                                        {
+                                                            "basicServiceType": "servicio 1",
+                                                            "basicServiceDescription": "descripcion del servicio 1",
+                                                            "isServiceApplies": "true",
+                                                            "isServiceExceptions": "false",
+                                                            "isServiceGranted": "true",
+                                                            "originQuantity": "5",
+                                                            "destinationQuantity": "10"
+                                                        },
+                                                        {
+                                                            "basicServiceType": "servicio 2",
+                                                            "basicServiceDescription": "descripcion del servicio 2",
+                                                            "isServiceApplies": "true",
+                                                            "isServiceExceptions": "false",
+                                                            "isServiceGranted": "true",
+                                                            "originQuantity": "5",
+                                                            "destinationQuantity": "10"
+                                                        }
+                                                    ],
+                                                    "notifications": {
+                                                        "isNotifiedInAirport": "false",
+                                                        "airportNotificationText": "usted será notificado en el aeropuerto",
+                                                        "isNotifiedOutsideAirport": "true",
+                                                        "outsideAirportNotificationText": "usted sera notificado fuera del aeropuerto"
+                                                    }
+                                                }
+                                            ],
+                                            "protections": [
+                                                {
+                                                    "airlineCode": "XL",
+                                                    "flightNumber": "100",
+                                                    "flightDate": "2014-08-20",
+                                                    "departureAirportCode": "SCL"
+                                                },
+                                                {
+                                                    "airlineCode": "XL",
+                                                    "flightNumber": "101",
+                                                    "flightDate": "2014-08-20",
+                                                    "departureAirportCode": "SCL"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "gateInformation": {
+                                        "gateNumber": "190",
+                                        "gateDescription": "Puerta de Embarque 190"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
             
                 
                 
