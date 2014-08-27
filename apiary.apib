@@ -6,16 +6,16 @@ Flight Status LATAM API provee información de status de vuelos LATAM.
 
 
 
-## Flight Status Information By Origin & Destination [/ws/api/flight-status/1.0/rest/origin-destination/information/airline/{airline}/departure/{departure}/arrival/{arrival}/departure-condition/{departureCondition}/time-standard/{timeStandard}/date-from/{dateFrom}/date-to/{dateTo}/language/{language}/country/{country}]
+## Flight Status Information By Origin & Destination [/ws/api/flight-status/1.0/rest/origin-destination/information/airline-code/{airlineCode}/departure-airport-code/{departureAirportCode}/
+arrival-airport-code/{arrivalAirportCode}/standar-time-condition/{standardTimeCondition}/date-time-from/{dateTimeFrom}/date-time-to/{dateTimeTo}/language/{language}/country/{country}]
 
 + Parameters
-    + airline (required, String, `ALL`) ...  `Airline Code`  accepted values LAN, TAM, ALL.
-    + departure (required, String, `SCL`) ...  `Airport Departure IATA Code`.
-    + arrival (required, String, `MIA`) ...  `Airport Arrival IATA Code`.
-    + departureCondition (required, String, `SCHEDULE`) ...  `Departure DateTime Condition to be Requested` accepted values SCHEDULE, REAL.
-    + timeStandard (required, String, `LOCAL`) ...  `Time Standard to be Requested` accepted values LOCAL, UTC.
-    + dateFrom (required, DateTime, `2014-08-20T00:00:00`) ... `Date Time from period Requested` pattern YYYY-MM-DDThh:mm:ss
-    + dateTo (required, DateTime, `2014-08-20T00:23:59:00`) ... `Date Time to period Requested` pattern YYYY-MM-DDThh:mm:ss
+    + airlineCode (required, String, `ALL`) ...  `IATA Airline Code`  accepted values LAN, TAM, ALL.
+    + departureAirportCode (required, String, `SCL`) ...  `Airport Departure IATA Code`.
+    + arrivalAirportCode (required, String, `MIA`) ...  `Airport Arrival IATA Code`.
+    + standardTimeCondition (required, String, `SCHEDULE`) ...  `Departure DateTime Condition to be Requested` accepted values SCHEDULE, REAL.
+    + dateTimeFrom (required, DateTime, `2014-08-20T00:00:00`) ... `Local Date Time from period Requested for UTC Time Zone add Z` pattern YYYY-MM-DDThh:mm:ss or YYYY-MM-DDThh:mm:ssZ
+    + dateTimeTo (required, DateTime, `2014-08-20T00:23:59:00`) ... `Local Date Time to period Requested for UTC Time Zone add Z` pattern YYYY-MM-DDThh:mm:ss or YYYY-MM-DDThh:mm:ssZ
     + language (required, String, `es`) ...  `language for message translation `  accepted values es, pt, en, de, fr, it
     + country (required, String, `cl`) ...  `country for message translation`  accepted values ar, cl, br, co, ec, pe, uy, py, us, mx, ca, de, es, fr, uk, ue, au, nz, un
     
