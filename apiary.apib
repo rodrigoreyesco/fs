@@ -286,7 +286,7 @@ Flight Status LATAM API provee información de status de vuelos LATAM.
             }
                 
             
-## Flight Status Information By Flight Number [/ws/api/flight-status/1.0/rest/flight-number/information/airline-code/{airlineCode}/flight-number/{flightNumber}/standar-time-condition/{standardTimeCondition}/departure-date/{departureDate}/language/{language}/country/{country}]
+## Flight Status Information By Flight Number [/ws/api/flight-status/1.0/rest/airline-code/{airlineCode}/flight-number/{flightNumber}/standar-time-condition/{standardTimeCondition}/departure-date/{departureDate}/language/{language}/country/{country}]
 
 + Parameters
     + airlineCode (required, String, `LAN`) ...  `IATA Airline Code or Comercial Airline Code, e.g LAN = LA, 4M, XL - TAM = JJ, PZ`  accepted values LAN, TAM, LA, 4M, XL, JJ, PZ.
@@ -298,6 +298,21 @@ Flight Status LATAM API provee información de status de vuelos LATAM.
     
 
 ### Retrieve a Flight Status Information By Flight Number [GET]
++ Request
+
+    + Headers
+        
+                Content-Type : application/json
+                flowId : 119d6ae2-3306-41dc-b5a0-e97d4a0e8b02
+                trackId : 7123132
+    
+    + Body
+                  
+                {
+                 "portal":"personas", 
+                 "application":"flight_status"
+                }
+                
 + Response 200 (application/json)
 
     + Header
