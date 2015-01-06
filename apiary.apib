@@ -16,9 +16,25 @@ Flight Status LATAM API provee información de status de vuelos LATAM.
     + departureDate (required, Date, `2014-08-20`) ...  `Local Departure Date for Flight Requested, for UTC Time Zone add Z` pattern YYYY-MM-DD or YYYY-MM-DDZ
     + language (required, String, `es`) ...  `language for message translation `  accepted values es, pt, en, de, fr, it
     + country (required, String, `cl`) ...  `country for message translation`  accepted values ar, cl, br, co, ec, pe, uy, py, us, mx, ca, de, es, fr, uk, ue, au, nz, un
-    
 
 ### Retrieve a Flight Status Information By Origin & Destination [GET]
+
++ Request
+
+    + Headers
+        
+                Content-Type : application/json
+                flowId : 119d6ae2-3306-41dc-b5a0-e97d4a0e8b02
+                trackId : 7123132
+    
+    + Body
+                  
+                {
+                 "language":"ES", 
+                 "country":"CL", 
+                 "portal":"personas", 
+                 "application":"upg"
+                }
 
 + Response 200 (application/json)
 
